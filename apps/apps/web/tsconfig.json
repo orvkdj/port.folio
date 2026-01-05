@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "~/*": ["./public/*"],
+      "content-collections": ["./.content-collections/generated"]
+    }
+  },
+  "extends": "@nelsonlaidev/typescript-config/nextjs.json",
+  "exclude": ["node_modules"],
+  "include": [
+    "src",
+    ".next/types/**/*.ts",
+    "next-env.d.ts",
+    "postcss.config.mjs",
+    "eslint.config.ts",
+    "next.config.ts",
+    "playwright.config.ts",
+    "vitest.config.ts",
+    "global.d.ts"
+  ]
+}

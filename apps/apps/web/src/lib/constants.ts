@@ -1,0 +1,22 @@
+export const IS_PRODUCTION = process.env.NODE_ENV === 'production'
+// eslint-disable-next-line unicorn/prefer-global-this -- using `typeof window` to safely detect non-browser environments; `globalThis` is always defined
+export const IS_SERVER = typeof window === 'undefined'
+
+export const GITHUB_USERNAME = 'orvkdj'
+
+export const MY_NAME = 'Andrea Mayqa Zharin'
+
+export const SITE_GITHUB_URL = 'https://https://github.com/orvkdj'
+export const SITE_FACEBOOK_URL = 'https://www.facebook.com/profile/amareleine'
+export const SITE_INSTAGRAM_URL = 'https://www.instagram.com/constellarine'
+export const SITE_X_URL = 'https://t.me/orvkdj'
+export const SITE_YOUTUBE_URL = 'https://www.youtube.com/@shirou4306'
+
+export const OG_IMAGE_WIDTH = 1200
+export const OG_IMAGE_HEIGHT = 630
+export const OG_IMAGE_TYPE = 'image/png'
+
+export const AVATAR_MAX_FILE_SIZE = 2 * 1024 * 1024 // 2MB
+export const SUPPORTED_AVATAR_MIME_TYPES = ['image/jpeg', 'image/png', 'image/webp'] as const
+
+export type AvatarMimeType = (typeof SUPPORTED_AVATAR_MIME_TYPES)[number]
