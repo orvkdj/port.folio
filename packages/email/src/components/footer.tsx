@@ -1,6 +1,6 @@
 import { Column, Hr, Img, Link, Row, Section, Text } from '@react-email/components'
 
-function Footer() {
+const Footer = () => {
   return (
     <>
       <Hr className='mt-6 mb-3' />
@@ -12,14 +12,14 @@ function Footer() {
             </Link>
           </Column>
           <Column className='align-middle'>
-            <Link href='https://github.com/nelsonlaidev/nelsonlai.dev' className='text-xl text-black'>
+            <Link href='https://github.com/orvkdj' className='text-xl text-black'>
               <Img src='https://nelsonlai.dev/images/email/github.png' alt='GitHub' width={22} height={22} />
             </Link>
           </Column>
         </Row>
       </Section>
       <Text className='mx-0 mt-6 mb-0 p-0 text-xs font-normal text-gray-500'>
-        © {new Date().getFullYear()} Nelson Lai. All rights reserved.
+        © {new Date().getFullYear()} Andrea Mayqa. All rights reserved.
       </Text>
     </>
   )

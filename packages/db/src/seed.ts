@@ -6,7 +6,7 @@ import { consola } from 'consola'
 import { db } from './db'
 import { posts } from './schemas'
 
-async function main() {
+const main = async () => {
   try {
     const files = await fs.readdir(path.join(process.cwd(), '../../apps/web/src/content/blog/en'))
 

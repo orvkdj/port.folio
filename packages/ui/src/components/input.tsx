@@ -2,7 +2,7 @@ import { cn } from '../utils/cn'
 
 type InputProps = React.ComponentProps<'input'>
 
-function Input(props: InputProps) {
+const Input = (props: InputProps) => {
   const { className, type, ...rest } = props
 
   return (

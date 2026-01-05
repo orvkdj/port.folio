@@ -10,22 +10,29 @@
     "clean": "rm -rf .turbo",
     "dev": "email dev --port 3002 --dir src/templates",
     "export": "email export",
-    "lint": "eslint --max-warnings 0 .",
-    "lint:fix": "eslint --fix --max-warnings 0 .",
-    "typecheck": "tsc --noEmit"
+    "lint": "eslint . --max-warnings 0",
+    "lint:fix": "eslint --fix .",
+    "type-check": "tsc --noEmit"
+  },
+  "lint-staged": {
+    "*.{js,mjs,jsx,ts,mts,tsx}": "eslint --fix",
+    "*": [
+      "prettier --write --ignore-unknown",
+      "cspell --no-progress --no-summary --no-must-find-files --unique"
+    ]
   },
   "dependencies": {
-    "@react-email/components": "1.0.2",
-    "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "@react-email/components": "0.5.7",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
   },
   "devDependencies": {
-    "@nelsonlaidev/eslint-config": "2.4.5",
-    "@nelsonlaidev/typescript-config": "1.1.1",
-    "@react-email/preview-server": "5.1.0",
-    "@types/node": "22.19.3",
-    "@types/react": "19.2.7",
-    "react-email": "5.1.0",
-    "tailwindcss": "4.1.18"
+    "@nelsonlaidev/eslint-config": "2.3.3",
+    "@nelsonlaidev/typescript-config": "1.0.0",
+    "@react-email/preview-server": "4.3.2",
+    "@types/node": "24.9.2",
+    "@types/react": "19.2.2",
+    "react-email": "4.3.2",
+    "tailwindcss": "4.1.16"
   }
 }

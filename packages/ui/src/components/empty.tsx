@@ -4,7 +4,7 @@ import { cn } from '../utils/cn'
 
 type EmptyProps = React.ComponentProps<'div'>
 
-function Empty(props: EmptyProps) {
+const Empty = (props: EmptyProps) => {
   const { className, ...rest } = props
 
   return (
@@ -22,7 +22,7 @@ function Empty(props: EmptyProps) {
 
 type EmptyHeaderProps = React.ComponentProps<'div'>
 
-function EmptyHeader(props: EmptyHeaderProps) {
+const EmptyHeader = (props: EmptyHeaderProps) => {
   const { className, ...rest } = props
 
   return (
@@ -49,7 +49,7 @@ const emptyMediaVariants = cva({
 
 type EmptyMediaProps = React.ComponentProps<'div'> & VariantProps<typeof emptyMediaVariants>
 
-function EmptyMedia(props: EmptyMediaProps) {
+const EmptyMedia = (props: EmptyMediaProps) => {
   const { className, variant = 'default', ...rest } = props
 
   return (
@@ -64,7 +64,7 @@ function EmptyMedia(props: EmptyMediaProps) {
 
 type EmptyTitleProps = React.ComponentProps<'div'>
 
-function EmptyTitle(props: EmptyTitleProps) {
+const EmptyTitle = (props: EmptyTitleProps) => {
   const { className, ...rest } = props
 
   return <div data-slot='empty-title' className={cn('text-lg font-medium tracking-tight', className)} {...rest} />
@@ -72,7 +72,7 @@ function EmptyTitle(props: EmptyTitleProps) {
 
 type EmptyDescriptionProps = React.ComponentProps<'p'>
 
-function EmptyDescription(props: EmptyDescriptionProps) {
+const EmptyDescription = (props: EmptyDescriptionProps) => {
   const { className, ...rest } = props
 
   return (
@@ -91,7 +91,7 @@ function EmptyDescription(props: EmptyDescriptionProps) {
 
 type EmptyContentProps = React.ComponentProps<'div'>
 
-function EmptyContent(props: EmptyContentProps) {
+const EmptyContent = (props: EmptyContentProps) => {
   const { className, ...rest } = props
 
   return (

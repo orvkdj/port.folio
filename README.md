@@ -61,6 +61,7 @@ Welcome to the monorepo of my personal blog! This repository houses the code for
 - Prettier code formatting
 - Lefthook
 - Conventional commit lint
+- CSpell for spell checking
 
 ### Authentication & Data
 

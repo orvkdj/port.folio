@@ -5,7 +5,7 @@ import { cn } from '../utils/cn'
 
 type CheckboxProps = React.ComponentProps<typeof CheckboxPrimitive.Root>
 
-function Checkbox(props: CheckboxProps) {
+const Checkbox = (props: CheckboxProps) => {
   const { className, ...rest } = props
 
   return (

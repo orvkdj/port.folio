@@ -7,7 +7,7 @@ import { Separator } from './separator'
 
 type ItemGroupProps = React.ComponentProps<'div'>
 
-function ItemGroup(props: ItemGroupProps) {
+const ItemGroup = (props: ItemGroupProps) => {
   const { className, ...rest } = props
 
   return (
@@ -17,7 +17,7 @@ function ItemGroup(props: ItemGroupProps) {
 
 type ItemSeparatorProps = React.ComponentProps<typeof Separator>
 
-function ItemSeparator(props: ItemSeparatorProps) {
+const ItemSeparator = (props: ItemSeparatorProps) => {
   const { className, ...rest } = props
 
   return <Separator data-slot='item-separator' orientation='horizontal' className={cn('my-0', className)} {...rest} />
@@ -48,7 +48,7 @@ const itemVariants = cva({
 
 type ItemProps = React.ComponentProps<'div'> & VariantProps<typeof itemVariants> & { asChild?: boolean }
 
-function Item(props: ItemProps) {
+const Item = (props: ItemProps) => {
   const { className, variant = 'default', size = 'default', asChild = false, ...rest } = props
   const Comp = asChild ? Slot.Root : 'div'
   return (
@@ -82,7 +82,7 @@ const itemMediaVariants = cva({
 
 type ItemMediaProps = React.ComponentProps<'div'> & VariantProps<typeof itemMediaVariants>
 
-function ItemMedia(props: ItemMediaProps) {
+const ItemMedia = (props: ItemMediaProps) => {
   const { className, variant = 'default', ...rest } = props
 
   return (
@@ -97,7 +97,7 @@ function ItemMedia(props: ItemMediaProps) {
 
 type ItemContentProps = React.ComponentProps<'div'>
 
-function ItemContent(props: ItemContentProps) {
+const ItemContent = (props: ItemContentProps) => {
   const { className, ...rest } = props
 
   return (
@@ -111,7 +111,7 @@ function ItemContent(props: ItemContentProps) {
 
 type ItemTitleProps = React.ComponentProps<'div'>
 
-function ItemTitle(props: ItemTitleProps) {
+const ItemTitle = (props: ItemTitleProps) => {
   const { className, ...rest } = props
 
   return (
@@ -125,7 +125,7 @@ function ItemTitle(props: ItemTitleProps) {
 
 type ItemDescriptionProps = React.ComponentProps<'p'>
 
-function ItemDescription(props: ItemDescriptionProps) {
+const ItemDescription = (props: ItemDescriptionProps) => {
   const { className, ...rest } = props
 
   return (
@@ -144,7 +144,7 @@ function ItemDescription(props: ItemDescriptionProps) {
 
 type ItemActionsProps = React.ComponentProps<'div'>
 
-function ItemActions(props: ItemActionsProps) {
+const ItemActions = (props: ItemActionsProps) => {
   const { className, ...rest } = props
 
   return <div data-slot='item-actions' className={cn('flex items-center gap-2', className)} {...rest} />
@@ -152,7 +152,7 @@ function ItemActions(props: ItemActionsProps) {
 
 type ItemHeaderProps = React.ComponentProps<'div'>
 
-function ItemHeader(props: ItemHeaderProps) {
+const ItemHeader = (props: ItemHeaderProps) => {
   const { className, ...rest } = props
 
   return (
@@ -166,7 +166,7 @@ function ItemHeader(props: ItemHeaderProps) {
 
 type ItemFooterProps = React.ComponentProps<'div'>
 
-function ItemFooter(props: ItemFooterProps) {
+const ItemFooter = (props: ItemFooterProps) => {
   const { className, ...rest } = props
 
   return (

@@ -10,7 +10,7 @@ import { Textarea } from './textarea'
 
 type InputGroupProps = React.ComponentProps<'div'>
 
-function InputGroup(props: InputGroupProps) {
+const InputGroup = (props: InputGroupProps) => {
   const { className, ...rest } = props
 
   return (
@@ -57,7 +57,7 @@ const inputGroupAddonVariants = cva({
 
 type InputGroupAddonProps = React.ComponentProps<'div'> & VariantProps<typeof inputGroupAddonVariants>
 
-function InputGroupAddon(props: InputGroupAddonProps) {
+const InputGroupAddon = (props: InputGroupAddonProps) => {
   const { className, align = 'inline-start', ...rest } = props
 
   return (
@@ -95,7 +95,7 @@ const inputGroupButtonVariants = cva({
 type InputGroupButtonProps = Omit<React.ComponentProps<typeof Button>, 'size'> &
   VariantProps<typeof inputGroupButtonVariants>
 
-function InputGroupButton(props: InputGroupButtonProps) {
+const InputGroupButton = (props: InputGroupButtonProps) => {
   const { className, type = 'button', variant = 'ghost', size = 'xs', ...rest } = props
 
   return (
@@ -111,7 +111,7 @@ function InputGroupButton(props: InputGroupButtonProps) {
 
 type InputGroupTextProps = React.ComponentProps<'span'>
 
-function InputGroupText(props: InputGroupTextProps) {
+const InputGroupText = (props: InputGroupTextProps) => {
   const { className, ...rest } = props
 
   return (
@@ -129,7 +129,7 @@ function InputGroupText(props: InputGroupTextProps) {
 
 type InputGroupInputProps = React.ComponentProps<'input'>
 
-function InputGroupInput(props: InputGroupInputProps) {
+const InputGroupInput = (props: InputGroupInputProps) => {
   const { className, ...rest } = props
 
   return (
@@ -148,7 +148,7 @@ function InputGroupInput(props: InputGroupInputProps) {
 
 type InputGroupTextareaProps = React.ComponentProps<'textarea'>
 
-function InputGroupTextarea(props: InputGroupTextareaProps) {
+const InputGroupTextarea = (props: InputGroupTextareaProps) => {
   const { className, ...rest } = props
 
   return (

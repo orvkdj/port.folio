@@ -6,7 +6,7 @@ import { cn } from '../utils/cn'
 
 type TooltipProviderProps = React.ComponentProps<typeof TooltipPrimitive.Provider>
 
-function TooltipProvider(props: TooltipProviderProps) {
+const TooltipProvider = (props: TooltipProviderProps) => {
   const { delayDuration = 0, ...rest } = props
 
   return <TooltipPrimitive.Provider data-slot='tooltip-provider' delayDuration={delayDuration} {...rest} />
@@ -14,7 +14,7 @@ function TooltipProvider(props: TooltipProviderProps) {
 
 type TooltipProps = React.ComponentProps<typeof TooltipPrimitive.Root>
 
-function Tooltip(props: TooltipProps) {
+const Tooltip = (props: TooltipProps) => {
   return (
     <TooltipProvider>
       <TooltipPrimitive.Root data-slot='tooltip' {...props} />
@@ -24,13 +24,13 @@ function Tooltip(props: TooltipProps) {
 
 type TooltipTriggerProps = React.ComponentProps<typeof TooltipPrimitive.Trigger>
 
-function TooltipTrigger(props: TooltipTriggerProps) {
+const TooltipTrigger = (props: TooltipTriggerProps) => {
   return <TooltipPrimitive.Trigger data-slot='tooltip-trigger' {...props} />
 }
 
 type TooltipContentProps = React.ComponentProps<typeof TooltipPrimitive.Content>
 
-function TooltipContent(props: TooltipContentProps) {
+const TooltipContent = (props: TooltipContentProps) => {
   const { className, sideOffset = 0, children, ...rest } = props
 
   return (

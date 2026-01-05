@@ -2,7 +2,7 @@ import { cn } from '../utils/cn'
 
 type TextareaProps = React.ComponentProps<'textarea'>
 
-function Textarea(props: TextareaProps) {
+const Textarea = (props: TextareaProps) => {
   const { className, ...rest } = props
 
   return (

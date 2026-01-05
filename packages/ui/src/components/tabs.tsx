@@ -4,7 +4,7 @@ import { cn } from '../utils/cn'
 
 type TabsProps = React.ComponentProps<typeof TabsPrimitive.Root>
 
-function Tabs(props: TabsProps) {
+const Tabs = (props: TabsProps) => {
   const { className, ...rest } = props
 
   return <TabsPrimitive.Root data-slot='tabs' className={cn('flex flex-col gap-2', className)} {...rest} />
@@ -12,7 +12,7 @@ function Tabs(props: TabsProps) {
 
 type TabsListProps = React.ComponentProps<typeof TabsPrimitive.List>
 
-function TabsList(props: TabsListProps) {
+const TabsList = (props: TabsListProps) => {
   const { className, ...rest } = props
 
   return (
@@ -29,7 +29,7 @@ function TabsList(props: TabsListProps) {
 
 type TabsTriggerProps = React.ComponentProps<typeof TabsPrimitive.Trigger>
 
-function TabsTrigger(props: TabsTriggerProps) {
+const TabsTrigger = (props: TabsTriggerProps) => {
   const { className, ...rest } = props
 
   return (
@@ -52,7 +52,7 @@ function TabsTrigger(props: TabsTriggerProps) {
 
 type TabsContentProps = React.ComponentProps<typeof TabsPrimitive.Content>
 
-function TabsContent(props: TabsContentProps) {
+const TabsContent = (props: TabsContentProps) => {
   const { className, ...rest } = props
 
   return <TabsPrimitive.Content data-slot='tabs-content' className={cn('flex-1 outline-none', className)} {...rest} />

@@ -11,7 +11,6 @@ nelsonlai.dev is a Next.js monorepo containing a personal website, and shared pa
 ```
 nelsonlai-dev/
 ├── apps/                   # Application workspaces
-│   ├── docs/               # Documentation site (Next.js)
 │   └── web/                # Main website (Next.js)
 ├── packages/               # Shared packages
 │   ├── db/                 # Database schema and migrations (Drizzle ORM)
@@ -19,7 +18,8 @@ nelsonlai-dev/
 │   ├── env/                # Environment variable management
 │   ├── i18n/               # Internationalization
 │   ├── kv/                 # Key-value store utilities
-│   └── ui/                 # Shared UI components library
+│   ├── ui/                 # Shared UI components library
+│   ├── utils/              # Common utility functions
 ```
 
 ### Key Directories AI Should Understand
@@ -42,7 +42,7 @@ nelsonlai-dev/
 
 ### Core Technologies
 
-- Framework: Next.js 16+ with App Router
+- Framework: Next.js 15+ with App Router
 - Language: TypeScript (strict mode)
 - Styling: Tailwind CSS with custom utility classes
 - Database: PostgreSQL with Drizzle ORM
@@ -63,8 +63,7 @@ nelsonlai-dev/
 
 ### TypeScript Guidelines
 
-- Use function keywords for component functions and named functions
-- Use arrow functions for anonymous callbacks and expressions
+- Always use arrow functions
 - Always use const unless reassignment is needed
 - Avoid destructuring props directly in the parameter signature
 - Avoid using interface for type definitions
@@ -84,14 +83,14 @@ type ComponentProps = {
 }
 
 // 2. Component definition
-function Component(props: ComponentProps) {
+const Component = (props: ComponentProps) => {
   const { className, ...rest } = props
 
   // 3. Hooks
   const [state, setState] = useState()
 
   // 4. Event handlers
-  function handleClick() {
+  const handleClick = () => {
     // ...
   }
 
@@ -111,8 +110,8 @@ export default Component
 
 - Use Tailwind CSS utilities
 - Use `cn()` helper from `@repo/ui/utils/cn` for conditional classes
-- Use `gap-*` for flex/grid containers for consistent spacing
-- Use margin utilities (`mt-*`, `mb-*`, etc.) for component-level spacing as needed
+- Prefer `space-x-*` and `space-y-*` over `mb-*` and `mt-*`
+- Prefer `gap-*` over `space-x-*` and `space-y-*` in flex containers
 - Avoid inline styles unless dynamic
 - Follow mobile-first responsive design
 
@@ -178,19 +177,19 @@ When modifying database schema:
 ### Creating New Routes
 
 ```ts
-// In apps/web/src/orpc/routers/todo.router.ts
+// In apps/web/src/orpc/routers/todo.route.ts
+import * as z from 'zod'
 import { publicProcedure, protectedProcedure } from '../root'
-import { todoOutputSchema, createTodoInputSchema } from '../schemas/todo.schema'
 
-// Router files use noun-based naming: <noun>.router.ts (e.g., todo.router.ts, auth.router.ts)
-// Individual procedures within routers use verb-noun format (e.g., listTodos, createTodo)
-export const listTodos = publicProcedure.output(todoOutputSchema).handler(async ({ context }) => {
+// Router name convention: use verb-noun format
+// e.g., get-user, create-post, update-profile
+export const listTodos = publicProcedure.output(todoSchema).handler(async ({ context }) => {
   // Implementation
 })
 
 export const createTodo = protectedProcedure
   .input(createTodoInputSchema)
-  .output(todoOutputSchema)
+  .output(todoSchema)
   .handler(async ({ input, context }) => {
     // Implementation
   })
@@ -200,7 +199,6 @@ export const createTodo = protectedProcedure
 
 ```ts
 // In apps/web/src/orpc/routers/index.ts
-import { listTodos, createTodo } from './todo.router'
 
 export const router = {
   todo: {
@@ -217,7 +215,7 @@ export const router = {
 import { useQuery } from '@tanstack/react-query'
 import { orpc } from '@/orpc/client'
 
-export function useTodos() {
+export const useTodos = () => {
   return useQuery(orpc.todo.listTodos.queryOptions())
 }
 ```
@@ -246,14 +244,14 @@ Follow Conventional Commits:
 
 Available scopes:
 
-- apps: docs, web
-- packages: db, email, env, i18n, kv, ui
+- apps: web
+- packages: db, email, env, i18n, kv, ui, utils
 
 ### PR Checklist
 
 Before submitting:
 
-1. Run `pnpm check` (includes lint, typecheck, format)
+1. Run `pnpm check` (includes lint, type-check, format)
 2. Run `pnpm test:unit && pnpm test:e2e` for affected packages
 3. Add/update tests for new features
 4. Ensure no console errors
@@ -271,46 +269,31 @@ pnpm install
 # Development
 pnpm dev              # Run all apps and packages
 pnpm dev:web          # Run web app only
-pnpm dev:docs         # Run docs app only
-pnpm dev:packages     # Run packages only
 
 # Building
-pnpm build            # Build all apps and packages
+pnpm build        # Build all apps and packages
 pnpm build:apps       # Build all apps
 pnpm build:mdx        # Build MDX content
 
 # Quality Checks
 pnpm lint             # Run ESLint
 pnpm lint:fix         # Fix ESLint issues
-pnpm format           # Format code with Prettier
 pnpm format:check     # Check Prettier formatting
-pnpm typecheck        # Run TypeScript checks
-pnpm knip             # Check for unused stuff
-pnpm check:i18n       # Check i18n translations
+pnpm format:fix       # Fix formatting
+pnpm type-check       # Run TypeScript checks
+pnpm check:knip       # Check for unused stuff
+pnpm check:spelling   # Check spelling
 pnpm check            # Run all checks
-pnpm clean            # Clean build artifacts
 
 # Database
-pnpm db:check         # Check database
 pnpm db:generate      # Generate migrations
 pnpm db:migrate       # Apply migrations
-pnpm db:push          # Push database changes
-pnpm db:reset         # Reset database
 pnpm db:seed          # Seed database
 pnpm db:studio        # Open Drizzle Studio
 
 # Testing
 pnpm test:e2e         # Run E2E tests
-pnpm test:e2e:ui      # Run E2E tests with UI
-pnpm test:e2e:inspector # Run E2E tests with inspector
-pnpm test:e2e:install # Install Playwright browsers
 pnpm test:unit        # Run unit tests
-pnpm test:unit:watch  # Run unit tests in watch mode
-pnpm test:unit:ui     # Run unit tests with UI
-pnpm test:unit:coverage # Run unit tests with coverage
-
-# Code Generation
-pnpm typegen          # Generate types
 ```
 
 ## Common Patterns
@@ -319,13 +302,13 @@ pnpm typegen          # Generate types
 
 ```tsx
 // Client Component with oRPC (preferred)
-function ClientComponent() {
+const ClientComponent = () => {
   const { data } = useTodos()
   return <div>{/* Render data */}</div>
 }
 
 // Server Component
-async function ServerComponent() {
+const ServerComponent = async () => {
   const data = await db.select().from(table)
   return <div>{/* Render data */}</div>
 }

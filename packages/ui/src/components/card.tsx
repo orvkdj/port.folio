@@ -2,7 +2,7 @@ import { cn } from '../utils/cn'
 
 type CardProps = React.ComponentProps<'div'>
 
-function Card(props: CardProps) {
+const Card = (props: CardProps) => {
   const { className, ...rest } = props
 
   return (
@@ -16,7 +16,7 @@ function Card(props: CardProps) {
 
 type CardHeaderProps = React.ComponentProps<'div'>
 
-function CardHeader(props: CardHeaderProps) {
+const CardHeader = (props: CardHeaderProps) => {
   const { className, ...rest } = props
 
   return (
@@ -35,7 +35,7 @@ function CardHeader(props: CardHeaderProps) {
 
 type CardTitleProps = React.ComponentProps<'div'>
 
-function CardTitle(props: CardTitleProps) {
+const CardTitle = (props: CardTitleProps) => {
   const { className, ...rest } = props
 
   return <div data-slot='card-title' className={cn('leading-none font-semibold', className)} {...rest} />
@@ -43,7 +43,7 @@ function CardTitle(props: CardTitleProps) {
 
 type CardDescriptionProps = React.ComponentProps<'div'>
 
-function CardDescription(props: CardDescriptionProps) {
+const CardDescription = (props: CardDescriptionProps) => {
   const { className, ...rest } = props
 
   return <div data-slot='card-description' className={cn('text-sm text-muted-foreground', className)} {...rest} />
@@ -51,7 +51,7 @@ function CardDescription(props: CardDescriptionProps) {
 
 type CardActionProps = React.ComponentProps<'div'>
 
-function CardAction(props: CardActionProps) {
+const CardAction = (props: CardActionProps) => {
   const { className, ...rest } = props
 
   return (
@@ -65,7 +65,7 @@ function CardAction(props: CardActionProps) {
 
 type CardContentProps = React.ComponentProps<'div'>
 
-function CardContent(props: CardContentProps) {
+const CardContent = (props: CardContentProps) => {
   const { className, ...rest } = props
 
   return <div data-slot='card-content' className={cn('px-6', className)} {...rest} />
@@ -73,7 +73,7 @@ function CardContent(props: CardContentProps) {
 
 type CardFooterProps = React.ComponentProps<'div'>
 
-function CardFooter(props: CardFooterProps) {
+const CardFooter = (props: CardFooterProps) => {
   const { className, ...rest } = props
 
   return (

@@ -4,7 +4,7 @@ import { cn } from '../utils/cn'
 
 type AvatarProps = React.ComponentProps<typeof AvatarPrimitive.Root>
 
-function Avatar(props: AvatarProps) {
+const Avatar = (props: AvatarProps) => {
   const { className, ...rest } = props
 
   return (
@@ -18,7 +18,7 @@ function Avatar(props: AvatarProps) {
 
 type AvatarImageProps = React.ComponentProps<typeof AvatarPrimitive.Image>
 
-function AvatarImage(props: AvatarImageProps) {
+const AvatarImage = (props: AvatarImageProps) => {
   const { className, ...rest } = props
 
   return (
@@ -28,7 +28,7 @@ function AvatarImage(props: AvatarImageProps) {
 
 type AvatarFallbackProps = React.ComponentProps<typeof AvatarPrimitive.Fallback>
 
-function AvatarFallback(props: AvatarFallbackProps) {
+const AvatarFallback = (props: AvatarFallbackProps) => {
   const { className, ...rest } = props
 
   return (

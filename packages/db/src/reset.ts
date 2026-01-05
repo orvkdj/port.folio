@@ -5,7 +5,7 @@ import { execa } from 'execa'
 
 import { db } from './db'
 
-async function main() {
+const main = async () => {
   const confirmed = await consola.prompt('Are you sure you want to reset the database?', {
     type: 'confirm'
   })

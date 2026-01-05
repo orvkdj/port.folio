@@ -8,7 +8,7 @@ type NavigationMenuProps = React.ComponentProps<typeof NavigationMenuPrimitive.R
   viewport?: boolean
 }
 
-function NavigationMenu(props: NavigationMenuProps) {
+const NavigationMenu = (props: NavigationMenuProps) => {
   const { className, children, viewport = true, ...rest } = props
 
   return (
@@ -26,7 +26,7 @@ function NavigationMenu(props: NavigationMenuProps) {
 
 type NavigationMenuListProps = React.ComponentProps<typeof NavigationMenuPrimitive.List>
 
-function NavigationMenuList(props: NavigationMenuListProps) {
+const NavigationMenuList = (props: NavigationMenuListProps) => {
   const { className, ...rest } = props
 
   return (
@@ -40,7 +40,7 @@ function NavigationMenuList(props: NavigationMenuListProps) {
 
 type NavigationMenuItemProps = React.ComponentProps<typeof NavigationMenuPrimitive.Item>
 
-function NavigationMenuItem(props: NavigationMenuItemProps) {
+const NavigationMenuItem = (props: NavigationMenuItemProps) => {
   const { className, ...rest } = props
 
   return (
@@ -61,7 +61,7 @@ const navigationMenuTriggerStyle = cva({
 
 type NavigationMenuTriggerProps = React.ComponentProps<typeof NavigationMenuPrimitive.Trigger>
 
-function NavigationMenuTrigger(props: NavigationMenuTriggerProps) {
+const NavigationMenuTrigger = (props: NavigationMenuTriggerProps) => {
   const { className, children, ...rest } = props
 
   return (
@@ -81,7 +81,7 @@ function NavigationMenuTrigger(props: NavigationMenuTriggerProps) {
 
 type NavigationMenuContentProps = React.ComponentProps<typeof NavigationMenuPrimitive.Content>
 
-function NavigationMenuContent(props: NavigationMenuContentProps) {
+const NavigationMenuContent = (props: NavigationMenuContentProps) => {
   const { className, ...rest } = props
 
   return (
@@ -107,7 +107,7 @@ function NavigationMenuContent(props: NavigationMenuContentProps) {
 
 type NavigationMenuViewportProps = React.ComponentProps<typeof NavigationMenuPrimitive.Viewport>
 
-function NavigationMenuViewport(props: NavigationMenuViewportProps) {
+const NavigationMenuViewport = (props: NavigationMenuViewportProps) => {
   const { className, ...rest } = props
 
   return (
@@ -129,7 +129,7 @@ function NavigationMenuViewport(props: NavigationMenuViewportProps) {
 
 type NavigationMenuLinkProps = React.ComponentProps<typeof NavigationMenuPrimitive.Link>
 
-function NavigationMenuLink(props: NavigationMenuLinkProps) {
+const NavigationMenuLink = (props: NavigationMenuLinkProps) => {
   const { className, ...rest } = props
 
   return (
@@ -152,7 +152,7 @@ function NavigationMenuLink(props: NavigationMenuLinkProps) {
 
 type NavigationMenuIndicatorProps = React.ComponentProps<typeof NavigationMenuPrimitive.Indicator>
 
-function NavigationMenuIndicator(props: NavigationMenuIndicatorProps) {
+const NavigationMenuIndicator = (props: NavigationMenuIndicatorProps) => {
   const { className, ...rest } = props
 
   return (

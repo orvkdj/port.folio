@@ -1,9 +1,10 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalDependencies": [".env*"],
+  "globalDependencies": [".env.*local"],
   "globalEnv": [
     "NODE_ENV",
     "CI",
+    "ANALYZE",
     "NEXT_RUNTIME",
     "DATABASE_URL",
     "UPSTASH_REDIS_REST_URL",
@@ -39,7 +40,6 @@
     "NEXT_PUBLIC_POSTHOG_HOST",
     "NEXT_PUBLIC_POSTHOG_KEY"
   ],
-  "ui": "tui",
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
@@ -81,13 +81,8 @@
       "cache": false,
       "persistent": true
     },
-    "lint": {
-      "dependsOn": ["typegen", "build:mdx"],
-      "outputs": []
-    },
-    "lint:fix": {
-      "cache": false
-    },
+    "lint": {},
+    "lint:fix": {},
     "test:e2e": {
       "outputs": ["playwright-report/**", "test-results/**"]
     },
@@ -99,12 +94,10 @@
       "cache": false,
       "persistent": true
     },
-    "typecheck": {
-      "dependsOn": ["typegen", "build:mdx"],
-      "outputs": []
-    },
+    "type-check": {},
     "typegen": {
       "outputs": [".next/types/**"]
     }
-  }
+  },
+  "ui": "tui"
 }

@@ -14,7 +14,7 @@ export const routing = defineRouting({
 })
 
 export const localeLabels: Record<(typeof routing.locales)[number], string> = {
-  en: 'English',
+  en: 'Indonesia',
   'zh-TW': '繁體中文',
   'zh-CN': '简体中文'
 }

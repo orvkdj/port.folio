@@ -32,7 +32,7 @@ type CarouselContextProps = {
 const CarouselContext = createContext<CarouselContextProps | null>(null)
 CarouselContext.displayName = 'CarouselContext'
 
-function useCarousel() {
+const useCarousel = () => {
   const context = use(CarouselContext)
 
   if (!context) {
@@ -44,7 +44,7 @@ function useCarousel() {
 
 type CarouselProps = React.ComponentProps<'div'> & CarouselBaseProps
 
-function Carousel(props: CarouselProps) {
+const Carousel = (props: CarouselProps) => {
   const { orientation = 'horizontal', opts, setApi, plugins, className, children, ...rest } = props
   const [carouselRef, api] = useEmblaCarousel(
     {
@@ -55,6 +55,12 @@ function Carousel(props: CarouselProps) {
   )
   const [canScrollPrev, setCanScrollPrev] = useState(false)
   const [canScrollNext, setCanScrollNext] = useState(false)
+
+  const onSelect = useCallback((a: CarouselApi) => {
+    if (!a) return
+    setCanScrollPrev(a.canScrollPrev())
+    setCanScrollNext(a.canScrollNext())
+  }, [])
 
   const scrollPrev = useCallback(() => {
     api?.scrollPrev()
@@ -84,13 +90,6 @@ function Carousel(props: CarouselProps) {
 
   useEffect(() => {
     if (!api) return
-
-    function onSelect(a: CarouselApi) {
-      if (!a) return
-      setCanScrollPrev(a.canScrollPrev())
-      setCanScrollNext(a.canScrollNext())
-    }
-
     onSelect(api)
     api.on('reInit', onSelect)
     api.on('select', onSelect)
@@ -98,7 +97,7 @@ function Carousel(props: CarouselProps) {
     return () => {
       api.off('select', onSelect)
     }
-  }, [api])
+  }, [api, onSelect])
 
   const value = useMemo(
     () => ({
@@ -132,7 +131,7 @@ function Carousel(props: CarouselProps) {
 
 type CarouselContentProps = React.ComponentProps<'div'>
 
-function CarouselContent(props: CarouselContentProps) {
+const CarouselContent = (props: CarouselContentProps) => {
   const { className, ...rest } = props
   const { carouselRef, orientation } = useCarousel()
 
@@ -145,7 +144,7 @@ function CarouselContent(props: CarouselContentProps) {
 
 type CarouselItemProps = React.ComponentProps<'div'>
 
-function CarouselItem(props: CarouselItemProps) {
+const CarouselItem = (props: CarouselItemProps) => {
   const { className, ...rest } = props
   const { orientation } = useCarousel()
 
@@ -162,7 +161,7 @@ function CarouselItem(props: CarouselItemProps) {
 
 type CarouselPreviousProps = React.ComponentProps<typeof Button>
 
-function CarouselPrevious(props: CarouselPreviousProps) {
+const CarouselPrevious = (props: CarouselPreviousProps) => {
   const { className, variant = 'outline', size = 'icon', ...rest } = props
   const { orientation, scrollPrev, canScrollPrev } = useCarousel()
 
@@ -190,7 +189,7 @@ function CarouselPrevious(props: CarouselPreviousProps) {
 
 type CarouselNextProps = React.ComponentProps<typeof Button>
 
-function CarouselNext(props: CarouselNextProps) {
+const CarouselNext = (props: CarouselNextProps) => {
   const { className, variant = 'outline', size = 'icon', ...rest } = props
   const { orientation, scrollNext, canScrollNext } = useCarousel()
 

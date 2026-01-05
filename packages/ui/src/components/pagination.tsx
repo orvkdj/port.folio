@@ -6,7 +6,7 @@ import { type Button, buttonVariants } from './button'
 
 type PaginationProps = React.ComponentProps<'nav'>
 
-function Pagination(props: PaginationProps) {
+const Pagination = (props: PaginationProps) => {
   const { className, ...rest } = props
 
   return (
@@ -22,7 +22,7 @@ function Pagination(props: PaginationProps) {
 
 type PaginationContentProps = React.ComponentProps<'ul'>
 
-function PaginationContent(props: PaginationContentProps) {
+const PaginationContent = (props: PaginationContentProps) => {
   const { className, ...rest } = props
 
   return <ul data-slot='pagination-content' className={cn('flex flex-row items-center gap-1', className)} {...rest} />
@@ -30,7 +30,7 @@ function PaginationContent(props: PaginationContentProps) {
 
 type PaginationItemProps = React.ComponentProps<'li'>
 
-function PaginationItem(props: PaginationItemProps) {
+const PaginationItem = (props: PaginationItemProps) => {
   return <li data-slot='pagination-item' {...props} />
 }
 
@@ -39,7 +39,7 @@ type PaginationLinkProps = {
 } & Pick<React.ComponentProps<typeof Button>, 'size'> &
   React.ComponentProps<'a'>
 
-function PaginationLink(props: PaginationLinkProps) {
+const PaginationLink = (props: PaginationLinkProps) => {
   const { className, isActive, size = 'icon', ...rest } = props
 
   return (
@@ -61,7 +61,7 @@ function PaginationLink(props: PaginationLinkProps) {
 
 type PaginationPreviousProps = React.ComponentProps<typeof PaginationLink>
 
-function PaginationPrevious(props: PaginationPreviousProps) {
+const PaginationPrevious = (props: PaginationPreviousProps) => {
   const { className, ...rest } = props
 
   return (
@@ -79,7 +79,7 @@ function PaginationPrevious(props: PaginationPreviousProps) {
 
 type PaginationNextProps = React.ComponentProps<typeof PaginationLink>
 
-function PaginationNext(props: PaginationNextProps) {
+const PaginationNext = (props: PaginationNextProps) => {
   const { className, ...rest } = props
 
   return (
@@ -97,7 +97,7 @@ function PaginationNext(props: PaginationNextProps) {
 
 type PaginationEllipsisProps = React.ComponentProps<'span'>
 
-function PaginationEllipsis(props: PaginationEllipsisProps) {
+const PaginationEllipsis = (props: PaginationEllipsisProps) => {
   const { className, ...rest } = props
 
   return (

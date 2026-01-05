@@ -10,7 +10,7 @@ type InputOTPProps = React.ComponentProps<typeof OTPInput> & {
   containerClassName?: string
 }
 
-function InputOTP(props: InputOTPProps) {
+const InputOTP = (props: InputOTPProps) => {
   const { className, containerClassName, ...rest } = props
 
   return (
@@ -25,7 +25,7 @@ function InputOTP(props: InputOTPProps) {
 
 type InputOTPGroupProps = React.ComponentProps<'div'>
 
-function InputOTPGroup(props: InputOTPGroupProps) {
+const InputOTPGroup = (props: InputOTPGroupProps) => {
   const { className, ...rest } = props
 
   return <div data-slot='input-otp-group' className={cn('flex items-center', className)} {...rest} />
@@ -35,7 +35,7 @@ type InputOTPSlotProps = React.ComponentProps<'div'> & {
   index: number
 }
 
-function InputOTPSlot(props: InputOTPSlotProps) {
+const InputOTPSlot = (props: InputOTPSlotProps) => {
   const { index, className, ...rest } = props
   const inputOTPContext = use(OTPInputContext)
   const { char, hasFakeCaret, isActive } = inputOTPContext.slots[index] ?? {}
@@ -67,7 +67,7 @@ function InputOTPSlot(props: InputOTPSlotProps) {
 
 type InputOTPSeparatorProps = React.ComponentProps<'div'>
 
-function InputOTPSeparator(props: InputOTPSeparatorProps) {
+const InputOTPSeparator = (props: InputOTPSeparatorProps) => {
   return (
     <div data-slot='input-otp-separator' role='separator' {...props}>
       <MinusIcon />

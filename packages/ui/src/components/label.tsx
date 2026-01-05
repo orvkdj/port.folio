@@ -4,7 +4,7 @@ import { cn } from '../utils/cn'
 
 type LabelProps = React.ComponentProps<typeof LabelPrimitive.Root>
 
-function Label(props: LabelProps) {
+const Label = (props: LabelProps) => {
   const { className, ...rest } = props
 
   return (

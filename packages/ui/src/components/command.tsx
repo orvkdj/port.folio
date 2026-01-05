@@ -9,7 +9,7 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } f
 
 type CommandProps = React.ComponentProps<typeof CommandPrimitive>
 
-function Command(props: CommandProps) {
+const Command = (props: CommandProps) => {
   const { className, ...rest } = props
 
   return (
@@ -28,7 +28,7 @@ type CommandDialogProps = React.ComponentProps<typeof Dialog> & {
   showCloseButton?: boolean
 }
 
-function CommandDialog(props: CommandDialogProps) {
+const CommandDialog = (props: CommandDialogProps) => {
   const {
     title = 'Command Palette',
     description = 'Search for a command to run...',
@@ -62,7 +62,7 @@ function CommandDialog(props: CommandDialogProps) {
 
 type CommandInputProps = React.ComponentProps<typeof CommandPrimitive.Input>
 
-function CommandInput(props: CommandInputProps) {
+const CommandInput = (props: CommandInputProps) => {
   const { className, ...rest } = props
 
   return (
@@ -84,7 +84,7 @@ function CommandInput(props: CommandInputProps) {
 
 type CommandListProps = React.ComponentProps<typeof CommandPrimitive.List>
 
-function CommandList(props: CommandListProps) {
+const CommandList = (props: CommandListProps) => {
   const { className, ...rest } = props
 
   return (
@@ -98,7 +98,7 @@ function CommandList(props: CommandListProps) {
 
 type CommandEmptyProps = React.ComponentProps<typeof CommandPrimitive.Empty>
 
-function CommandEmpty(props: CommandEmptyProps) {
+const CommandEmpty = (props: CommandEmptyProps) => {
   const { className, ...rest } = props
 
   return (
@@ -108,7 +108,7 @@ function CommandEmpty(props: CommandEmptyProps) {
 
 type CommandGroupProps = React.ComponentProps<typeof CommandPrimitive.Group>
 
-function CommandGroup(props: CommandGroupProps) {
+const CommandGroup = (props: CommandGroupProps) => {
   const { className, ...rest } = props
 
   return (
@@ -126,7 +126,7 @@ function CommandGroup(props: CommandGroupProps) {
 
 type CommandSeparatorProps = React.ComponentProps<typeof CommandPrimitive.Separator>
 
-function CommandSeparator(props: CommandSeparatorProps) {
+const CommandSeparator = (props: CommandSeparatorProps) => {
   const { className, ...rest } = props
 
   return (
@@ -140,7 +140,7 @@ function CommandSeparator(props: CommandSeparatorProps) {
 
 type CommandItemProps = React.ComponentProps<typeof CommandPrimitive.Item>
 
-function CommandItem(props: CommandItemProps) {
+const CommandItem = (props: CommandItemProps) => {
   const { className, ...rest } = props
 
   return (
@@ -162,7 +162,7 @@ function CommandItem(props: CommandItemProps) {
 
 type CommandShortcutProps = React.ComponentProps<'span'>
 
-function CommandShortcut(props: CommandShortcutProps) {
+const CommandShortcut = (props: CommandShortcutProps) => {
   const { className, ...rest } = props
 
   return (

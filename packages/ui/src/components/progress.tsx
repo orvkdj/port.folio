@@ -4,7 +4,7 @@ import { cn } from '../utils/cn'
 
 type ProgressProps = React.ComponentProps<typeof ProgressPrimitive.Root>
 
-function Progress(props: ProgressProps) {
+const Progress = (props: ProgressProps) => {
   const { className, value, ...rest } = props
 
   return (

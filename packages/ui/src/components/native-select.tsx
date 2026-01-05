@@ -4,7 +4,7 @@ import { cn } from '../utils/cn'
 
 type NativeSelectProps = React.ComponentProps<'select'>
 
-function NativeSelect(props: NativeSelectProps) {
+const NativeSelect = (props: NativeSelectProps) => {
   const { className, ...rest } = props
 
   return (
@@ -37,13 +37,13 @@ function NativeSelect(props: NativeSelectProps) {
 
 type NativeSelectOptionProps = React.ComponentProps<'option'>
 
-function NativeSelectOption(props: NativeSelectOptionProps) {
+const NativeSelectOption = (props: NativeSelectOptionProps) => {
   return <option data-slot='native-select-option' {...props} />
 }
 
 type NativeSelectOptGroupProps = React.ComponentProps<'optgroup'>
 
-function NativeSelectOptGroup(props: NativeSelectOptGroupProps) {
+const NativeSelectOptGroup = (props: NativeSelectOptGroupProps) => {
   return <optgroup data-slot='native-select-optgroup' {...props} />
 }
 

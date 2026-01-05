@@ -8,19 +8,25 @@
   "types": "./src/index.ts",
   "scripts": {
     "clean": "rm -rf .turbo",
-    "lint": "eslint --max-warnings 0 .",
-    "lint:fix": "eslint --fix --max-warnings 0 .",
-    "typecheck": "tsc --noEmit"
+    "lint": "eslint . --max-warnings 0",
+    "lint:fix": "eslint --fix .",
+    "type-check": "tsc --noEmit"
+  },
+  "lint-staged": {
+    "*.{js,mjs,jsx,ts,mts,tsx}": "eslint --fix",
+    "*": [
+      "prettier --write --ignore-unknown",
+      "cspell --no-progress --no-summary --no-must-find-files --unique"
+    ]
   },
   "dependencies": {
-    "@upstash/ratelimit": "2.0.7",
-    "@upstash/redis": "1.35.8",
+    "@upstash/ratelimit": "2.0.6",
+    "@upstash/redis": "1.35.6",
     "consola": "3.4.2"
   },
   "devDependencies": {
-    "@nelsonlaidev/eslint-config": "2.4.5",
-    "@nelsonlaidev/typescript-config": "1.1.1",
-    "@repo/env": "workspace:*",
-    "@types/node": "22.19.3"
+    "@nelsonlaidev/eslint-config": "2.3.3",
+    "@nelsonlaidev/typescript-config": "1.0.0",
+    "@repo/env": "workspace:*"
   }
 }

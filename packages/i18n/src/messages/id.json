@@ -1,0 +1,285 @@
+{
+  "about": {
+    "description": "Halo! Saya Andrea, mahasiswa Teknologi Informasi yang menggemari Desain Grafis, Ilustrasi, serta Desain UI/UX. Jelajahi portofolio saya untuk melihat kemampuan dan pengalaman saya di bidang tersebut. Senang berkenalan!"
+  },
+  "account": {
+    "account-created": "Akun Dibuat",
+    "active-sessions": "Sesi Aktif",
+    "avatar": "Avatar",
+    "description": "Kelola akun Anda.",
+    "display-name": "Nama Tampilan",
+    "edit-name": "Edit Nama",
+    "edit-name-description": "Ubah nama tampilan. Nama ini akan muncul pada profil dan komentar.",
+    "email": "Email",
+    "no-active-sessions": "Tidak ada sesi aktif",
+    "profile": "Profil",
+    "revoke-session": "Cabut",
+    "this-device": "Perangkat ini",
+    "update-avatar": "Perbarui Avatar"
+  },
+  "admin": {
+    "page-header": {
+      "comments": {
+        "description": "Kelola komentar"
+      },
+      "users": {
+        "description": "Kelola pengguna"
+      }
+    }
+  },
+  "blog": {
+    "comments": {
+      "author": "Penulis",
+      "comments": "{count, plural, =1 {komentar} other {komentar}}",
+      "copy-link": "Salin Tautan",
+      "dislike": "Tidak Suka",
+      "highlighted-comment": "Komentar unggulan",
+      "newest": "Terbaru",
+      "no-comments": "Belum ada komentar",
+      "oldest": "Terlama",
+      "open-menu": "Buka Menu",
+      "placeholder": "Tulis komentar...",
+      "preview": "Pratinjau",
+      "replies": "{count, plural, =1 {balasan} other {balasan}}",
+      "reply": "Balas",
+      "reply-to-comment": "Balas komentar",
+      "send-comment": "Kirim Komentar",
+      "sort-by": "Urutkan berdasarkan",
+      "this-comment-has-been-deleted": "[Komentar ini telah dihapus]",
+      "toggle-bold": "Tebal",
+      "toggle-italic": "Miring",
+      "toggle-strikethrough": "Coret",
+      "write": "Tulis"
+    },
+    "description": "Temukan blog dan website saya, di mana saya berbagi tutorial, catatan, dan pengalaman saya sebagai seorang Graphic Designer.",
+    "footer": {
+      "edit-on-github": "Edit di GitHub",
+      "last-updated": "Terakhir diperbarui: {date}"
+    },
+    "header": {
+      "published-on": "Diterbitkan pada",
+      "views": "Tayangan",
+      "written-by": "Ditulis oleh"
+    },
+    "like-this-post": "Suka artikel ini",
+    "on-this-page": "Pada halaman ini"
+  },
+  "command-menu": {
+    "actions": {
+      "copy-link": "Salin tautan",
+      "source-code": "Kode sumber"
+    },
+    "groups": {
+      "social": "Sosial"
+    },
+    "no-results": "Tidak ada hasil.",
+    "open-menu": "Buka menu perintah",
+    "placeholder": "Ketik perintah atau cari..."
+  },
+  "common": {
+    "cancel": "Batal",
+    "delete": "Hapus",
+    "dialogs": {
+      "delete-comment": {
+        "description": "Apakah Anda yakin ingin menghapus komentar ini? Tindakan ini tidak dapat dibatalkan.",
+        "title": "Hapus komentar"
+      }
+    },
+    "error": "Kesalahan",
+    "labels": {
+      "about": "Tentang",
+      "account": "Akun",
+      "blog": "Blog",
+      "comment": "Komentar",
+      "comments": "Komentar",
+      "dashboard": "Dasbor",
+      "facebook": "Facebook",
+      "general": "Umum",
+      "github": "GitHub",
+      "guestbook": "Buku Tamu",
+      "home": "Beranda",
+      "instagram": "Instagram",
+      "links": "Tautan",
+      "privacy": "Privasi",
+      "projects": "Proyek",
+      "settings": "Pengaturan",
+      "terms": "Ketentuan Layanan",
+      "unsubscribe": "Berhenti Berlangganan",
+      "users": "Pengguna",
+      "uses": "Peralatan",
+      "youtube": "YouTube"
+    },
+    "like": "Suka",
+    "likes": "{count, plural, =1 {# suka} other {# suka}}",
+    "save": "Simpan",
+    "sign-in": "Masuk",
+    "sign-out": "Keluar",
+    "unknown": "Tidak diketahui",
+    "views": "{count, plural, =1 {# tayangan} other {# tayangan}}"
+  },
+  "components": {
+    "filtered-posts": {
+      "no-posts-found": "Tidak ada artikel ditemukan",
+      "placeholder": "Cari artikel..."
+    },
+    "go-to-homepage": "Kembali ke beranda"
+  },
+  "dashboard": {
+    "description": "Ini adalah dasbor pribadi saya, tempat saya memantau statistik dari platform seperti YouTube, GitHub, dan lainnya.",
+    "stat": {
+      "blog-total-likes": "Total Suka Blog",
+      "blog-total-views": "Total Tayangan Blog",
+      "coding-hours": "Jam Coding",
+      "github-followers": "Pengikut GitHub",
+      "github-stars": "Bintang GitHub",
+      "youtube-subscribers": "Subscriber YouTube",
+      "youtube-views": "Tayangan YouTube"
+    }
+  },
+  "dialog": {
+    "sign-in": {
+      "continue-with": "Lanjutkan dengan {provider}",
+      "description": "untuk melanjutkan",
+      "last-used": "Terakhir digunakan",
+      "notice": "Dengan melanjutkan, Anda menyetujui <terms>Ketentuan Layanan</terms> dan <privacy>Kebijakan Privasi</privacy>"
+    }
+  },
+  "error": {
+    "avatar-too-large": "Ukuran file avatar terlalu besar. Pilih file lebih kecil dari {size} MB.",
+    "avatar-unsupported-file": "Harap pilih gambar dengan format yang didukung (JPEG, PNG, WEBP, GIF, AVIF).",
+    "comment-cannot-be-empty": "Komentar tidak boleh kosong",
+    "copy-to-clipboard-error": "Gagal menyalin ke clipboard.",
+    "failed-to-fetch-comments-data": "Gagal memuat data komentar.",
+    "failed-to-fetch-users-data": "Gagal memuat data pengguna.",
+    "failed-to-load": "Gagal memuat.",
+    "failed-to-load-comments": "Gagal memuat komentar.",
+    "failed-to-load-messages": "Gagal memuat pesan.",
+    "failed-to-load-replies": "Gagal memuat balasan.",
+    "like-limit-reached": "Anda hanya dapat menyukai 3 kali per posting",
+    "message-cannot-be-empty": "Pesan tidak boleh kosong",
+    "name-cannot-be-empty": "Nama tidak boleh kosong",
+    "name-too-long": "Nama terlalu panjang",
+    "need-logged-in-to-vote": "Anda harus masuk untuk memberi suara",
+    "not-found": "Halaman tidak ditemukan.",
+    "reply-cannot-be-empty": "Balasan tidak boleh kosong",
+    "sign-in-error": "Gagal masuk.",
+    "sign-out-failed": "Gagal keluar.",
+    "something-went-wrong": "Terjadi kesalahan.",
+    "try-again": "Coba lagi"
+  },
+  "guestbook": {
+    "description": "Tulis pesan di buku tamu saya. Kamu bisa menuliskan apa saja!",
+    "no-messages": "Belum ada pesan. Jadilah yang pertama!",
+    "pinned": {
+      "description": "Terima kasih telah berkunjung! Jika berkenan, tinggalkan pesan atau pendapatmu :)",
+      "greeting": "Halo! 👋"
+    },
+    "placeholder": "Tulis pesan...",
+    "signin": {
+      "description": "untuk meninggalkan pesan"
+    },
+    "submit": "Kirim"
+  },
+  "homepage": {
+    "about-me": {
+      "coding-hours": "Jam coding",
+      "connect": "Terhubung",
+      "fav-framework": "Framework Favorit",
+      "location": "Hong Kong",
+      "more": "Selengkapnya tentang saya",
+      "stacks": "Teknologi",
+      "title": "Tentang Saya"
+    },
+    "get-in-touch": {
+      "description": "Jangan ragu menghubungi saya!",
+      "image-alt": "Logo Andrea",
+      "title": "Ada pertanyaan Saya?"
+    },
+    "hero": {
+      "amazing": "Keren",
+      "attractive": "Menarik",
+      "fantastic": "Fantastis",
+      "location-timezone": "Jakarta • UTC+7",
+      "stunning": "Mempesona",
+      "title-bottom": "React",
+      "title-middle-left": "membangun",
+      "title-middle-right": "website menggunakan",
+      "title-top": "Saya Andrea, seorang Junior Graphic Designer"
+    },
+    "latest-articles": {
+      "card": "Artikel",
+      "more": "Lihat semua artikel",
+      "title": "Artikel Terbaru"
+    },
+    "selected-projects": {
+      "card": "Proyek",
+      "more": "Lihat semua proyek",
+      "title": "Proyek Terpilih"
+    }
+  },
+  "layout": {
+    "change-language": "Ganti Bahasa",
+    "now-playing": {
+      "loading": "Memuat...",
+      "not-listening": "Tidak Sedang Mendengarkan - Spotify"
+    },
+    "skip-to-main-content": "Loncat ke konten utama",
+    "toggle-menu": "Ubah menu"
+  },
+  "mdx": {
+    "link-to-section": "Tautkan ke bagian"
+  },
+  "metadata": {
+    "site-description": "Andrea adalah Junior Graphic Designer berbasis di Indonesia. Ia membuat konten sosial media yang sesuai dengan citra Brand."
+  },
+  "privacy": {
+    "description": "Halaman ini menjelaskan bagaimana kami mengelola data Anda."
+  },
+  "projects": {
+    "description": "Kumpulan proyek saya yang dibuat dengan penuh dedikasi.",
+    "visit-website": "Kunjungi Website"
+  },
+  "settings": {
+    "description": "Kelola pengaturan Anda",
+    "notification-settings": "Pengaturan Notifikasi",
+    "reply-notification": "Notifikasi Balasan",
+    "reply-notification-description": "Terima email saat seseorang membalas komentar Anda."
+  },
+  "success": {
+    "avatar-updated": "Avatar berhasil diperbarui",
+    "comment-deleted": "Komentar dihapus",
+    "comment-posted": "Komentar terkirim",
+    "copied-to-clipboard": "Disalin ke clipboard",
+    "link-copied": "Tautan disalin",
+    "message-created": "Pesan berhasil dibuat",
+    "message-deleted": "Pesan berhasil dihapus",
+    "name-updated": "Nama berhasil diperbarui",
+    "reply-posted": "Balasan terkirim",
+    "session-revoked": "Sesi berhasil dicabut",
+    "settings-saved": "Pengaturan berhasil disimpan",
+    "signed-out": "Berhasil keluar"
+  },
+  "terms": {
+    "description": "Halaman ini berisi syarat dan ketentuan penggunaan website."
+  },
+  "theme-toggle": {
+    "options": {
+      "dark": "Gelap",
+      "light": "Terang",
+      "system": "Sistem"
+    },
+    "toggle-theme": "Ubah tema"
+  },
+  "unsubscribe": {
+    "invalid-link-description": "Tautan berhenti langganan tidak valid. Coba lagi.",
+    "invalid-unsubscribe-link": "Tautan tidak valid",
+    "stop-receiving-email-notifications": "Berhenti menerima notifikasi email untuk balasan komentar ini",
+    "unsubscribe-from-this-comment": "Berhenti berlangganan komentar ini",
+    "unsubscribed-description": "Anda tidak akan lagi menerima notifikasi email.",
+    "you-are-unsubscribing-as": "Anda berhenti berlangganan sebagai {email}",
+    "you-have-been-unsubscribed": "Anda telah berhenti berlangganan"
+  },
+  "uses": {
+    "description": "Ini adalah perangkat dan alat yang saya gunakan untuk pekerjaan sehari-hari, gaming, coding, dan pembuatan konten."
+  }
+}
